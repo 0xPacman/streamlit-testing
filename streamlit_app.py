@@ -15,7 +15,10 @@ response = os.system("ping -n 4 " + host)
 st.write(response)
 
 st.write("Security Test")
-st.write("cat /etc/passwd")
+st.write(os.system("cat /etc/passwd"))
+
+st.markdown("<script>alert('XSS')</script>", unsafe_allow_html=True)
+
 
 st.markdown("""
     <style>
