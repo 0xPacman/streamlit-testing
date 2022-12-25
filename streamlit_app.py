@@ -1,13 +1,19 @@
 import streamlit as st
 import datetime
 import time
+import os
 
-st.title("Current Time")
+st.title("Testing Streamlit")
 
 st.write("the time now is:")
-while True:
-    st.write(datetime.datetime.now())
-    time.sleep(1)
+st.write(datetime.datetime.now())
+
+
+st.write("pinging google.com")
+host = "google.com"
+response = os.system("ping -n 4 " + host)
+st.write(response)
+
 
 st.markdown("""
     <style>
