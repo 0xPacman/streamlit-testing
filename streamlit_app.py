@@ -4,10 +4,9 @@ import time
 
 st.title("Current Time")
 
+
 while True:
-    current_time = datetime.datetime.now()
-    st.write(f"The current time is: {current_time.strftime('%H:%M:%S')}")
-    st.balloons()
+    st.write(datetime.datetime.now())
     time.sleep(1)
 
 st.markdown("""
