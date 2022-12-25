@@ -4,11 +4,11 @@ import time
 
 st.title("Current Time")
 
-
 while True:
     st.write(datetime.datetime.now())
+    st.empty()
     time.sleep(1)
-
+    
 st.markdown("""
     <style>
         h1 {
