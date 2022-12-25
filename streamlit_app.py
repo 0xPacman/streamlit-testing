@@ -1,10 +1,14 @@
 import streamlit as st
 import datetime
+import time
 
 st.title("Current Time")
 
-current_time = datetime.datetime.now()
-st.write(f"The current time is: {current_time.strftime('%H:%M:%S')}")
+while True:
+    current_time = datetime.datetime.now()
+    st.write(f"The current time is: {current_time.strftime('%H:%M:%S')}")
+    st.balloons()
+    time.sleep(1)
 
 st.markdown("""
     <style>
@@ -14,4 +18,3 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
-
